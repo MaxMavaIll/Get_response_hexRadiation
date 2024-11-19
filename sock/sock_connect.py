@@ -37,7 +37,7 @@ class Socket:
             self._response_hex = response
             return True
         except Exception as e:
-            print(f"Сталася помилка: {e}")
+            print(f"Error during Send_RequestHex: ip -> {self.server_ip_address} {e}")
             return False
 
 
@@ -51,4 +51,4 @@ class Socket:
         try:
             self.connect()
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error during CONNECT: ip -> {self.server_ip_address} {e}")
